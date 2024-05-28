@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carso - Second Hand Car Prices</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212; /* Dark background */
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      animation: slideInDown 1s ease-out;
+    }
+    h1 {
+      font-size: 48px;
+      color: #ff6600; /* Orange color */
+      margin-bottom: 10px;
+      animation: fadeIn 1s ease-out;
+    }
+    p {
+      font-size: 24px;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      animation: slideInUp 1s ease-out;
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #ff6600; /* Orange color */
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+      font-size: 20px;
+      margin: 10px;
+      animation: fadeIn 1s ease-out;
+    }
+    .btn:hover {
+      background-color: #e65c00; /* Darker shade of orange on hover */
+    }
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slideInUp {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Carso</h1>
+    <p>Your destination to know second-hand car prices</p>
+  </header>
+  <div class="container">
+    <p>Start exploring now!</p>
+    <a href="#" class="btn">Know Your Car Price</a>
+    <a href="#" class="btn">Contact Us</a>
+  </div>
+</body>
+</html>
+
