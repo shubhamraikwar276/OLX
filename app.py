@@ -1,4 +1,5 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
+import sqlite3
 
 app = Flask(__name__)
 
@@ -16,6 +17,17 @@ def contactus():
         state = request.form.get("state")
         message = request.form.get("message")
         print(name,email,country,state,message)
+        conn = sqlite3.connect('contactus.db')
+        cur = conn.cursor()
+        cur.execute(f'''
+        Insert into contact values(
+                    "{name}","{email}","{country}","{state}","{message}"
+        )
+        ''')
+
+        conn.commit()
+        return render_template("message.html")
+
     else:
         return render_template('contactus.html')
 
