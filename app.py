@@ -63,11 +63,12 @@ def predict():
             mymodel = pickle.load(model)
         res = mymodel.predict([[int(Year),int(KMs_Driven),mkenc,mdlenc,flenc,rgctenc,cardcdnc,assenc,trenc]])
         print(res[0])
+        return render_template("result.html",car_price = str(int(res[0]*0.3))+" INR")
 
     else:
         return render_template('predict.html')
     
-    return render_template("result.html",car_price = str(int(res[0]*0.3))+" INR")
+    
 
 
 
